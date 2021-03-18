@@ -1,0 +1,139 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  overflow: hidden;
+}
+
+.container {
+  height: 100vh;
+  background: url(./assets/lighthouse.jpg) no-repeat center center fixed;
+  background-size: cover;
+}
+
+.title {
+  font-family: 'Open Sans', sans-serif;
+  font-size: clamp(4rem, 5vw, 18rem);
+  padding-top: 20%;
+  padding-left: 24px;
+  min-width: 500px;
+  display: flex;
+  flex-flow: column, wrap;
+  justify-content: center;
+}
+
+.bird-one, .bird-two {
+  background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/174479/bird-cells-new.svg);
+  background-size: auto 100%;
+	width: 80px;
+	height: 125px;
+
+  animation-name: fly-cycle;
+	animation-duration: 1s;
+	animation-delay: -0.5s;
+	animation-timing-function: steps(10);
+	animation-iteration-count: infinite;
+}
+
+.banner-bird-one {
+  position: absolute;
+  top: 30%;
+  left: -5%;
+
+  animation-name: first-one;
+  animation-timing-function: linear;
+	animation-iteration-count: infinite;
+  animation-duration: 12s;
+}
+
+.banner-bird-two {
+  position: absolute;
+  top: 25%;
+  left: -5%;
+
+  animation-name: second-one;
+  animation-timing-function: linear;
+	animation-iteration-count: infinite;
+  animation-duration: 8s;
+}
+
+@keyframes fly-two {
+	100% {
+		background-position: -3600px 0;
+	}
+}
+
+@keyframes fly-cycle {
+	100% {
+		background-position: -3600px 0;
+	}
+}
+
+@keyframes first-one {
+  0% {
+		transform: scale(0.3) translateX(-10vw);
+	}
+	
+	10% {
+		transform: translateY(2vh) translateX(10vw) scale(0.4);
+	}
+  20% {
+		transform: translateY(0vh) translateX(30vw) scale(0.5);
+	}
+	
+	30% {
+		transform: translateY(4vh) translateX(50vw) scale(0.6);
+	}
+	
+	40% {
+		transform: translateY(2vh) translateX(70vw) scale(0.6);
+	}
+	
+	50% {
+		transform: translateY(0vh) translateX(90vw) scale(0.6);
+	}
+	
+	60% {
+		transform: translateY(0vh) translateX(110vw) scale(0.6);
+	}
+	
+	100% {
+		transform: translateY(0vh) translateX(110vw) scale(0.6);
+	}
+}
+
+@keyframes second-one {
+  0% {
+		transform: translateY(-2vh) translateX(-10vw) scale(0.5);
+	}
+	
+	10% {
+		transform: translateY(0vh) translateX(10vw) scale(0.4);
+	}
+	
+	20% {
+		transform: translateY(-4vh) translateX(30vw) scale(0.6);
+	}
+	
+	30% {
+		transform: translateY(1vh) translateX(50vw) scale(0.45);
+	}
+	
+	40% {
+		transform: translateY(-2.5vh) translateX(70vw) scale(0.5);
+	}
+	
+	50% {
+		transform: translateY(0vh) translateX(90vw) scale(0.45);
+	}
+	
+	60% {
+		transform: translateY(0vh) translateX(110vw) scale(0.45);
+	}
+	
+	100% {
+		transform: translateY(0vh) translateX(110vw) scale(0.45);
+	}
+}
